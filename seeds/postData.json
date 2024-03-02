@@ -1,10 +1,12 @@
 [
     {
       "title": "How MVC is important",
-      "description": "It combines all of the strategies we've learned thus far. The Model (collecting the data; back-end), the View (what the user sees and interacts with; front-end), and the Controller (the connection between Model and View; middleware)."
+      "description": "It combines all of the strategies we've learned thus far. The Model (collecting the data; back-end), the View (what the user sees and interacts with; front-end), and the Controller (the connection between Model and View; middleware).",
+      "user_id": 1
     },
     {
       "title": "What ORM stands for",
-      "description": "ORM means Object-Relational Mapping. It helps us create and connect to a database much easier using Sequelize."
+      "description": "ORM means Object-Relational Mapping. It helps us create and connect to a database much easier using Sequelize.",
+      "user_id": 2
     }
 ]

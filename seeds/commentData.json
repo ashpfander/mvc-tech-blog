@@ -1,8 +1,12 @@
 [
     {
-      "description": "It definitely seems overwhelming at first, but I'm sure I'll get better the more I work in it!"
+      "description": "It definitely seems overwhelming at first, but I'm sure I'll get better the more I work in it!",
+      "user_id": 3,
+      "post_id": 1
     },
     {
-      "description": "We just learned this in our course!"
+      "description": "We just learned this in our course!",
+      "user_id": 2,
+      "post_id": 1
     }
 ]
