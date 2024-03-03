@@ -1,0 +1,30 @@
+<div class="row post">
+    <div class="col-md-5 post-header pt-3 ps-4">
+        <h2>{{post.title}}</h2>
+        <p>Created by {{post.user.username}} on {{format_date post.date_created}}</p>
+    </div>
+    <div class="col-md-7 pt-3 ps-4">
+        <p class="description">{{post.description}}</p>
+    </div>
+</div>
+{{#each comments as |comment| }}
+<div class="row post">
+    <div class="comment-header">
+    </div>
+    <div class="pt-3 ps-4">
+        <p>{{comment.description}}</p>
+        <p>– {{comment.user.username}}, {{format_date comment.date_created}}</p>
+    </div>
+</div>
+{{/each}}
+<div class="row post">
+    <div class="post-header pt-3 ps-4 pb-2">
+        <h4>Add Comment</h4>
+    </div>
+    <div class="pt-3 ps-4">
+        <textarea class="comment-input" type="text" id="leave-comment"></textarea>
+        <div class="d-flex justify-content-center p-3">
+            <button class="new-post" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
