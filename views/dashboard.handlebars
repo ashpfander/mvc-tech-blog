@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center">
+    <button class="new-post">Add New Post</button>
+</div>
+{{#each posts as |post| }}
+<a class="no-link" href="">
+    <div class="d-flex flex-row justify-content-between self-post mt-3 pt-3 ps-3 pe-3">
+        <p>{{post.title}}</p>
+        <p>{{format_date post.date_created}}</p>
+    </div>
+</a>
+{{/each}}
