@@ -1,11 +1,30 @@
 <div class="d-flex justify-content-center">
-    <button class="new-post">Add New Post</button>
+    <button class="new-post" id="new-post-btn">Add New Post</button>
 </div>
+{{#if post.length}}
 {{#each posts as |post| }}
-<a class="no-link" href="">
+<a class="no-link" href="/post/{{post.id}}">
     <div class="d-flex flex-row justify-content-between self-post mt-3 pt-3 ps-3 pe-3">
         <p>{{post.title}}</p>
         <p>{{format_date post.date_created}}</p>
     </div>
 </a>
 {{/each}}
+{{/if}}
+
+{{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
