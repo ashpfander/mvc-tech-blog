@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
 // Create a new post
-router.post('/posts', async (req, res) => {
+router.post('/post', async (req, res) => {
     try {
         res.render('newpost');
     } catch (err) {

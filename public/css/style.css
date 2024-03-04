@@ -14,15 +14,19 @@ header a:hover {
     color: antiquewhite;
 }
 
-header button {
+header button,
+.login-button {
     border-style: none;
+    background-color: white;
     color: goldenrod;
     padding: 0.5rem;
     font-size: large;
 }
 
-header button:hover {
+header button:hover,
+.login-button:hover {
     background-color: antiquewhite;
+    color: goldenrod;
 }
 
 .post {
