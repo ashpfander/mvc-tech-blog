@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
             // If successful, redirect the browser to the dashboard page
             document.location.replace('/dashboard');
         } else {
-            alert(response.statusText);
+            alert('Incorrect email or password. Please try again.');
         }
     }
 };
@@ -41,7 +41,7 @@ const signupFormHandler = async (event) => {
             // If successful, redirect the browser to the dashboard page
             document.location.replace('/dashboard');
         } else {
-            alert(response.statusText);
+            alert('Password must be at least 8 characters long.');
         }
     }
 };
