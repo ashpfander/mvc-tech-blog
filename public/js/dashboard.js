@@ -5,7 +5,7 @@ const newPost = async (event) => {
     const description = document.querySelector('#post-description').value.trim();
   
     if (title && description) {
-        const response = await fetch(`/api/posts`, {
+        const response = await fetch(`/api/post`, {
             method: 'POST',
             body: JSON.stringify({ title, description }),
             headers: {
@@ -28,7 +28,7 @@ const editPost = async (event) => {
     const title = document.getElementById('post-title');
     const description = document.getElementById('post-description');
 
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/post/${id}`, {
         method: 'PUT', 
         body: JSON.stringify({ title: title.value, description: description.value }),
         headers: {
@@ -46,7 +46,7 @@ const delPost = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
   
-        const response = await fetch(`/api/posts/${id}`, {
+        const response = await fetch(`/api/post/${id}`, {
             method: 'DELETE',
         });
   

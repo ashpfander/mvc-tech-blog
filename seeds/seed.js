@@ -5,7 +5,7 @@ const { User, Post, Comment } = require('../models');
 
 // Creating variables for each of the seeds data
 const userData = require('./userData.json');
-const postData = require('./projectData.json');
+const postData = require('./postData.json');
 const commentData = require('./commentData.json');
 
 // Function for seeding the database

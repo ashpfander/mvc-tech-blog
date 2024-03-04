@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a specific post by id
-router.get('/posts/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [{
@@ -37,10 +37,7 @@ router.get('/posts/:id', async (req, res) => {
 
         const post = postData.get({ plain: true });
 
-        res.render('post', {
-            ...post,
-            logged_in: req.session.logged_in
-        });
+        res.render('post');
     } catch (err) {
         res.status(500).json(err);
     }
