@@ -1,9 +1,9 @@
 <div class="d-flex justify-content-center">
-    <a href="/api/post" class="new-post">Add New Post</a>
+    <a href="/dashboard/newpost" class="new-post">Add New Post</a>
 </div>
-{{#if post.length}}
+{{#if posts.length}}
 {{#each posts as |post| }}
-<a class="no-link" href="/post/{{post.id}}">
+<a class="no-link" href="/dashboard/edit/{{post.id}}">
     <div class="d-flex flex-row justify-content-between self-post mt-3 pt-3 ps-3 pe-3">
         <p>{{post.title}}</p>
         <p>{{format_date post.date_created}}</p>

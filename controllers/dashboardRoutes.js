@@ -26,16 +26,18 @@ router.get('/', async (req, res) => {
 });
 
 // Create a new post
-router.post('/post', async (req, res) => {
+router.get('/newpost', async (req, res) => {
     try {
-        res.render('newpost');
+        res.render('newpost', {
+            logged_in: true
+        });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
 // Edit post
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         // Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id, {
