@@ -19,12 +19,13 @@ router.post('/', withAuth, async (req, res) => {
 // Edit post with route /api/post/:id
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        const editPost = await Post.update({
-            where: {
-                id: req.params.id
-            }
-        });
-  
+        const editPost = await Post.update(req.params.body,
+            {
+                where: {
+                    id: req.params.id
+                }
+            });
+
         res.status(200).json(editPost);
     } catch (err) {
         res.status(400).json(err);

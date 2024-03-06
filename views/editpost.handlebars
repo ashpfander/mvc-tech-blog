@@ -3,6 +3,7 @@
         <h3>Edit Post:</h3>
             
         <form class="edit-post-form">
+            <input type="hidden" id="post-id" value="{{post.id}}"/>
         <div class="form-line">
             <label for="post-title">title:</label>
             <input class="form-input" type="text" id="post-title" name="post-title" value="{{post.title}}"/>
@@ -19,4 +20,4 @@
     </div>
 </div>
 
-<script src="/js/dashboard.js"></script>
+<script src="/js/editpost.js"></script>
