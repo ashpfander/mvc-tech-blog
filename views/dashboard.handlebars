@@ -7,10 +7,10 @@
 </div>
 {{#if posts.length}}
 {{#each posts as |post| }}
-<a class="no-link" href="/dashboard/edit/{{post.id}}">
+<a class="no-link" href="/dashboard/edit/{{id}}">
     <div class="d-flex flex-row justify-content-between self-post mt-3 pt-3 ps-3 pe-3">
-        <p>{{post.title}}</p>
-        <p>{{format_date post.date_created}}</p>
+        <p>{{title}}</p>
+        <p>{{format_date date_created}}</p>
     </div>
 </a>
 {{/each}}

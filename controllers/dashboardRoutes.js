@@ -40,15 +40,12 @@ router.get('/newpost', async (req, res) => {
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         // Find the logged in user based on the session ID
-        const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ['password'] },
-            include: [{ model: Post }],
-        });
+        const postData = await Post.findByPk(req.params.id);
 
-        const user = userData.get({ plain: true });
+        const post = postData.get({ plain: true });
 
         res.render('editpost', {
-            ...user,
+            post,
             logged_in: true
         });
     } catch (err) {
