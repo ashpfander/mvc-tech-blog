@@ -69,7 +69,3 @@ document
 document
     .querySelector('#delete-btn')
     .addEventListener('click', delPost);
-
-document
-    .querySelector('#new-post-btn')
-    .addEventListener('click', '/newpost');

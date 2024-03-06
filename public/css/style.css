@@ -60,6 +60,7 @@ header button:hover,
 
 .new-post {
     border-style: none;
+    text-decoration: none;
     background-color: goldenrod;
     color: white;
     padding: 0.75rem;
