@@ -20,18 +20,16 @@ const editPost = async (event) => {
 }
 
 const delPost = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-        const id = event.target.getAttribute('data-id');
+    const postId = document.getElementById('post-id').value;
+
+    const response = await fetch(`/api/post/${postId}`, {
+        method: 'DELETE',
+    });
   
-        const response = await fetch(`/api/post/${id}`, {
-            method: 'DELETE',
-        });
-  
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert('Something went wrong. Please try again.');
-        }
+    if (response.ok) {
+        document.location.replace('/dashboard');
+    } else {
+        alert('Something went wrong. Please try again.');
     }
 };
 
